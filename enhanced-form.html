@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+
+</head>
+<body>
+    <header>
+        <h1>Registration for Advanced HTML5 Workshop</h1>
+        <nav>
+            <ul>
+                <li><a href="#form-section">Register</a></li>
+                <li><a href="#info-section">Workshop Info</a></li>
+                <li><a href="#media-section">Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="info-section">
+            <h2>Workshop Details</h2>
+            <table>
+                <caption>Schedule Overview</caption>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Topic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>July 15, 2025</td>
+                        <td>10:00 AM - 12:00 PM</td>
+                        <td>HTML5 Semantics</td>
+                    </tr>
+                    <tr>
+                        <td>July 16, 2025</td>
+                        <td>1:00 PM - 3:00 PM</td>
+                        <td>Forms & Validation</td>
+                    </tr>
+                    <tr>
+                        <td>July 17, 2025</td>
+                        <td>10:00 AM - 12:00 PM</td>
+                        <td>Media & Accessibility</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Semantic HTML5 elements</li>
+                <li>Advanced form controls</li>
+                
+                <li>Embedding audio and video</li>
+               
+            </ul>
+        </section>
+
+        <section id="media-section">
+            <h2>Workshop Preview</h2>
+            <figure>
+                <img src="workshop-preview.jpg" alt="Preview of HTML5 Workshop" width="400">
+                <figcaption>Join us for hands-on HTML5 learning!</figcaption>
+            </figure>
+            <video controls width="400">
+                <source src="intro-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio controls>
+                <source src="welcome-message.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section id="form-section">
+            <h2>Register Now</h2>
+            <form action="/submit" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required autocomplete="name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9\-]{10,15}" required autocomplete="tel">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Workshop Preferences</legend>
+                    <label for="session">Preferred Session:</label>
+                    <select id="session" name="session" required>
+                        <option value="" disabled selected>Select a session</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                    </select>
+
+                    <label>Topics of Interest:</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="semantics" name="topics" value="semantics">
+                            <label for="semantics">HTML5 Semantics</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="forms" name="topics" value="forms">
+                            <label for="forms">Forms & Validation</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="media" name="topics" value="media">
+                            <label for="media">Media & Accessibility</label>
+                        </li>
+                    </ul>
+
+                    <label>Experience Level:</label>
+                    <input type="radio" id="beginner" name="experience" value="beginner" required>
+                    <label for="beginner">Beginner</label>
+                    <input type="radio" id="intermediate" name="experience" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                    <input type="radio" id="advanced" name="experience" value="advanced">
+                    <label for="advanced">Advanced</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Any special requirements?" maxlength="300"></textarea>
+
+                    <label for="referral">Referral Code:</label>
+                    <input type="text" id="referral" name="referral" value="HTML5-2025" readonly>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
